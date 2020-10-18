@@ -1,0 +1,168 @@
+body{
+      background-color: lightgray;
+  }
+  .sideFilter ol{
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+      padding: 0;
+    }
+  .sideFilter{
+    background-color: white;
+    padding: 15px;
+    margin:10px 0;
+  }
+  .sideFilter h5{
+    text-align: center;
+      margin: 15px 20px; 
+          border-bottom: 1px solid black;
+ 
+  }
+  .pgmLogo{
+    width: 100%;
+    height: auto;
+      background-color: lightgray;
+  }
+  .ProgramList {
+      background: white;
+      padding: 15px;
+      margin: 20px;
+          border-radius: 5px;
+  }
+  .ProgramList .text-content span {
+      color: #6c6c82;
+  }
+  .ProgramList .text-content .subHead {
+      color: black;
+      font-weight: 700;
+  }
+  .pgmContent > div {
+    margin-bottom: 20px;
+  }
+  .text-content >div {
+      margin: 10px;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  [class*="col-"] {
+    float: left;
+  }
+
+  html {
+    font-family: "Lucida Sans", sans-serif;
+  }
+  .header{
+      position: fixed;
+      top: 0;
+      display: block;
+      width: 100%;
+  }
+  .row{
+    margin-top:85px;
+  }
+  .header {
+    background-color: lightgray;
+    color: #ffffff;
+  }
+  .menu {
+    float: left;
+  }
+  .pgmContent {
+      float: right;
+  }
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    list-style-type: none;
+    background-color: #00800099;
+    margin-bottom: 15px!important;
+    margin: auto;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+
+  .menu li:hover {
+    background-color: #0099cc;
+  }
+  footer{
+    text-align: center;
+    padding: 20px 0;
+  }
+  .ProgramList .pgmLogo img {
+    width: 100%;
+    height: 100%;
+}
+  @media only screen and (min-width: 990px){
+  /* For desktop: */
+  .col-2 {
+    width: 16.66%;
+    padding: 10px;
+  }
+  .col-3 {
+    width: 25%;
+    /*padding: 10px;*/}
+
+  .col-10 {
+    width: 81.33%;
+  }
+}
+@media only screen and (max-width: 998px) {
+  .col-2 {
+    width: 24.66%;
+    padding: 10px;
+  }
+  .col-3 {
+    width: 45%;
+   /* padding: 10px;*/}
+
+  .col-10 {
+    width: 71.33%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .header{
+      position: relative;
+    top: 0;
+    display: block;
+    width: 100%;
+  }
+  .row{
+    margin-top:5px;
+  }
+  .header {
+    background-color: lightgray;
+    color: #ffffff;
+  }
+  .col-2 {
+    padding: 0px;
+  }
+  .sideFilter,
+  .ProgramList {
+      margin: 20px;
+  }
+  .pgmContent > div {
+    margin-bottom: 0px;
+  }
+}
+  .ProgramList .text-content .pgmHead {
+    color: black;
+    font-weight: 700;
+    };
