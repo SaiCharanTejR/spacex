@@ -1,16 +1,15 @@
 body{
-      background-color: lightgray;
+      background-color: #F2F2F2;
   }
-  .sideFilter ol{
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-      padding: 0;
+    .sideFilter ol{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
     }
   .sideFilter{
     background-color: white;
     padding: 15px;
-    margin:10px 0;
+        border-radius: 5px;
   }
   .sideFilter h5{
     text-align: center;
@@ -21,12 +20,11 @@ body{
   .pgmLogo{
     width: 100%;
     height: auto;
-      background-color: lightgray;
+      background-color: #F2F2F2;
   }
   .ProgramList {
       background: white;
       padding: 15px;
-      margin: 20px;
           border-radius: 5px;
   }
   .ProgramList .text-content span {
@@ -35,9 +33,6 @@ body{
   .ProgramList .text-content .subHead {
       color: black;
       font-weight: 700;
-  }
-  .pgmContent > div {
-    margin-bottom: 20px;
   }
   .text-content >div {
       margin: 10px;
@@ -65,16 +60,11 @@ body{
     margin-top:85px;
   }
   .header {
-    background-color: lightgray;
-    color: #ffffff;
-  }
-  .menu {
-    float: left;
+    background-color: #F2F2F2;
+    color:black;
   }
   .pgmContent {
-    float: right;
-    display: flex;
-    flex-wrap: wrap;
+      float: right;
   }
   .menu ul {
     list-style-type: none;
@@ -82,22 +72,30 @@ body{
     padding: 0;
   }
 
-  .menu li {
-    list-style-type: none;
-    background-color: #00800099;
-    margin-bottom: 15px!important;
-    margin: auto;
-    width: fit-content;
-    border-radius: 5px;
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color: #33b5e5;
+ .menu li {
+    margin-bottom: 20px;
     color: #ffffff;
+    flex-grow: 0;
+    text-align: center;
+    flex-shrink: 0;
+    list-style-type: none;
+    flex-basis: 40%;
+    padding: 8px 0;
+    margin: 0 auto 20px;
+    flex-direction: column;
+    border-radius: 5px;
+    justify-content: space-between;
+    background-color: #C5E09B;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    cursor: pointer;;
+  }
+
+  .active {
+    background-color: #7CBA01 !important;
   }
 
   .menu li:hover {
-    background-color: #0099cc;
+    background-color: #7CBA01;
   }
   footer{
     text-align: center;
@@ -107,33 +105,72 @@ body{
     width: 100%;
     height: 100%;
 }
+.pgmContent .cardLayout {
+    margin-bottom: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-direction: column;
+    background: white;
+    border-radius: 5px;
+    justify-content: flex-start;
+  }
+  .pgmContent {
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.ProgramList .text-content .pgmHead {
+    color: black;
+    font-weight: 700;
+}
+
   @media only screen and (min-width: 990px){
   /* For desktop: */
   .col-2 {
     width: 16.66%;
-    padding: 10px;
+    padding: 0 10px;
   }
-  .col-3 {
-    width: 25%;
-    /*padding: 10px;*/}
 
   .col-10 {
     width: 81.33%;
   }
+  	  .pgmContent .cardLayout {
+    margin-bottom: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 23%;
+    flex-direction: column;
+    background: #ffffff;
+    margin-right: 8px;
+    margin-left: 8px;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+.pgmContent {
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
 }
 @media only screen and (max-width: 998px) {
   .col-2 {
     width: 24.66%;
-    padding: 10px;
+    padding: 0 10px;
   }
-  .col-3 {
-    width: 45%;
-   /* padding: 10px;*/}
 
   .col-10 {
     width: 71.33%;
-  }
+
 }
+.pgmContent .cardLayout {
+
+    flex-basis: 48%;
+
+}
+  }
 
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
@@ -160,15 +197,28 @@ body{
   .ProgramList {
       margin: 20px;
   }
-  .pgmContent > div {
-    margin-bottom: 20px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 50%;
-    flex-direction: column;
+  .pgmContent .cardLayout {
+    flex-basis: 88%;
+    margin:0 auto 20px;
+
 }
 }
-  .ProgramList .text-content .pgmHead {
-    color: black;
-    font-weight: 700;
-    };
+
+.loader {
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  background-color: yellowgreen;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

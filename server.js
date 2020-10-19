@@ -20,8 +20,14 @@ function renderMarkup(html) {
     <html lang="en">
     <head>
         <meta charset="UTF-8"/>
+        <meta name="og:title" content='SpaceX Launch Programs' />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+          name="description"
+          content="SpaceX Launch Programs"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Document</title>
+        <title>SpaceX Launch Programs</title>
         <link rel="stylesheet" type="text/css" href="./styles.css" />
     </head>
     <body>

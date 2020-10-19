@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductCard /> matches snapshot 1`] = `
+<div>
+  <div
+    class="col-3 cardLayout"
+  >
+    <div
+      class="ProgramList"
+    >
+      <div
+        class="pgmLogo"
+      >
+        <img
+          alt="pgm logo"
+          src="https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png"
+        />
+      </div>
+      <div
+        class="text-content"
+      >
+        <div
+          class="pgmHead"
+        >
+          FalconSat #1
+        </div>
+        <div>
+          <span
+            class="subHead"
+          >
+            Mission IDs :
+          </span>
+          <span />
+        </div>
+        <div>
+          <span
+            class="subHead"
+          >
+            Launch year :
+          </span>
+          <span
+            data-testid="launch-year"
+          >
+            2006
+          </span>
+        </div>
+        <div>
+          <span
+            class="subHead"
+          >
+            Successful launch:
+          </span>
+          <span
+            data-testid="launch-element"
+          >
+            False
+          </span>
+        </div>
+        <div>
+          <span
+            class="subHead"
+          >
+            Successful Landing:
+          </span>
+          <span
+            data-testid="land-element"
+          >
+            False
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

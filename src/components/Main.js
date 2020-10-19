@@ -3,6 +3,7 @@ import ProductCard from './ProductCard';
 
 const Main = () => {
     const [list, setList] = useState([]);
+    const [loading, setLoading] = useState(false);
     const [launchYear, setLaunchYear] = useState('');
     const [launchSuccess, setLaunchSuccess] = useState('');
     const [landSuccess, setLandSuccess] = useState('');
@@ -29,6 +30,7 @@ const Main = () => {
         }
     }
     const callApi = () => {
+        setLoading(true);
         let url = 'https://api.spaceXdata.com/v3/launches?limit=100';
 
         if (launchSuccess !== '') {
@@ -44,8 +46,8 @@ const Main = () => {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                console.log(data)
-                setList(data)
+                setList(data);
+                setLoading(false);
             });
     }
     useEffect(() => {
@@ -53,18 +55,19 @@ const Main = () => {
     }, [launchSuccess, landSuccess, launchYear]);
     return (
         <div>
-            <div class="header">
+            {loading ? <div className="loader"></div> : ''}
+            <div className="header">
                 <h1>SpaceX Launch Programs</h1>
             </div>
 
-            <div class="row">
-                <div class="col-2 menu">
-                    <div class="sideFilter">
+            <div className="row">
+                <div className="col-2 menu">
+                    <div className="sideFilter">
                         <h4>Filters</h4>
                         <h5><p>Launch Year</p></h5>
                         <span>
                             <ol>
-                                {launchYearArr.map(year => <li onClick={() => handleLaunchYear(year)} className={launchYear === year ? 'active' : ''}>{year}</li>)}
+                                {launchYearArr.map(year => <li key={year} onClick={() => handleLaunchYear(year)} className={launchYear === year ? 'active' : ''}>{year}</li>)}
                             </ol>
                         </span>
                         <h5>Successful Launch</h5>
@@ -84,7 +87,7 @@ const Main = () => {
                     </div>
                 </div>
 
-                <div class="col-10 pgmContent">
+                <div className="col-10 pgmContent">
                     {list.map(data =>
                         <ProductCard {...data} />)}
                 </div>
