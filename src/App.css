@@ -152,7 +152,7 @@ body{
     float: right;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
 }
 }
 @media only screen and (max-width: 998px) {
